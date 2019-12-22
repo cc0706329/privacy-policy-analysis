@@ -1,0 +1,19 @@
+"model" directory: contains our models.
+"use_guide.py": an example to use our models.
+"use_model.so": The API to use our model for predicting.
+
+The models input form must be [sample, 415, 300], here, [sample] is the number of segments in the input data, [415] is the max length of words in a segments, and [300] is the dimensions of word vector. 
+The output is like [sample, 10], here [10] represent 10 privacy categories defined in the paper, and one dimension corresponds one category:
+{'Other' : 0, 
+ 'Policy Change' : 1, 
+ 'First Party Collection/Use' : 2, 
+ 'Third Party Sharing/Collection' : 3,
+ 'Do Not Track' : 4,
+ 'Data Security' : 5,
+ 'User Choice/Control' : 6,
+ 'International and Specific Audiences' : 7,
+ 'Data Retention' : 8,
+ 'User Access, Edit and Deletion' : 9
+}
+
+To use the model, you must guarantee that "use_model.so" and "model" are in the same directory in Linux system.
