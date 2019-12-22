@@ -1,0 +1,2 @@
+model.h5: cnn
+rf1.m, rf2.m, rf3.m: 3 random forest.
